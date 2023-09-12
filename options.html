@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* Add some style to the options page */
+        body {
+            margin: 0;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        input {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+        }
+
+        button {
+            display: block;
+            width: 20%;
+            height: 40px;
+            margin: 10px auto;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3E8E41;
+        }
+
+        #status {
+            text-align: center;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Options Page</h1>
+    <p>This page allows you to customize some settings for your extension.</p>
+    <input type="text" id="name" placeholder="Enter your name" />
+    <button id="save">Save</button>
+    <div id="status"></div>
+    <script src="options.js"></script> <!-- Link to the options script -->
+</body>
+
+</html>
