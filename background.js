@@ -32,3 +32,14 @@ chrome.contextMenus.create({
     });
       console.log('message sent! From Background');
   });
+
+
+
+  // Listen for messages from the popup script
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  // Check if the message is from the popup script
+  if (sender.url.endsWith('popup.html')) {
+    // Log the message to the console
+    console.log(message.text);
+  }
+});
