@@ -23,20 +23,12 @@ chrome.contextMenus.create({
     const message = {text: 'Hello from local storage!'};
       // await chrome.tabs.sendMessage(tab.id, message);
     // Save the message to local storage
-  await chrome.storage.local.set({message: message.text}, function() {
-    console.log('Message is set to local storage');
-  });
+    await chrome.storage.local.set({message: message.text}, function() {
+      if (chrome.runtime.lastError) {
+        console.error('An error occurred: ' + chrome.runtime.lastError.message);
+      } else {
+        console.log('Message is set to local storage');
+      }
+    });
       console.log('message sent! From Background');
   });
-  
-
-
-
-
-
-
-
-
-
-
-
